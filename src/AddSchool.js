@@ -34,7 +34,6 @@ const AddSchool = () => {
                 })
                 .catch((err) => console.log("Error :" + err))
         }
-        window.location.reload();
         
     }
     return (
