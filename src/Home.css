@@ -1,0 +1,36 @@
+#home{
+    width:50%; 
+    text-align: center;
+    margin: 100px auto 0 auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#home #btn-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#home #btn-section button{
+    width:120px;
+    height:45px;
+    margin-bottom: 30px;
+    background-color: white;
+    border:1px solid grey;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight:600;
+}
+
+#home #btn-section button:hover{
+    cursor: pointer;
+    background-color: #363636;
+    color:white;
+    border:none;
+}
+
+@media (max-width:680px) {
+    #home{
+        width:90%;
+    }
+}

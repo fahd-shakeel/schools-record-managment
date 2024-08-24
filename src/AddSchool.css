@@ -1,0 +1,67 @@
+
+#add-school{
+    width:50%;
+    margin:5% auto 0 auto;
+    border:3px solid black;
+    border-radius: 10px;
+}
+
+#add-school #heading{
+
+    text-align: center;
+}
+
+#add-school #form-layout{
+    width:90%;
+    /* border:2px solid orange; */
+    margin-bottom:10px;
+    margin-top:10px;
+    margin:0 auto;
+}
+
+#add-school #form-layout div{
+    display: flex;
+    flex-direction: column;
+    margin:20px auto;
+}
+
+#add-school #form-layout div label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+#add-school #form-layout div input{
+    margin:0;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#add-school #btn{
+    width:90%;
+    margin:0 auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#add-school button{
+    width:120px;
+    height:40px;
+    background-color: #363636;
+    color: white;
+    font-size: 1.25em;
+    border:2px solid black;
+    border-radius: 4px;
+}
+
+#add-school button:hover{
+    cursor: pointer;
+}
+
+@media (max-width:680px) {
+    #add-school{
+        width:90%;
+    }
+}
