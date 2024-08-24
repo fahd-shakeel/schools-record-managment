@@ -4,6 +4,7 @@ const Student = require('./models/student.model')
 const cors = require('cors')
 const { Navigator } = require('node-navigator')
 const navigator = new Navigator();
+const database_name = "sql12727656";
 
 app.use(cors())
 app.use(express.json())
@@ -18,13 +19,15 @@ Student.connect((err) => {
     }
 })
 
+
+
 app.post('/addSchool', (req, res) => {
     const name = req.body.name;
     const address = req.body.address;
     const latitude = req.body.latitude;
     const longitude = req.body.longitude;
 
-    Student.query(`SELECT * FROM schools WHERE latitude like '${latitude}' AND longitude like '${longitude}';`, (err, result) => {
+    Student.query(`SELECT * FROM ${database_name} WHERE latitude like '${latitude}' AND longitude like '${longitude}';`, (err, result) => {
         if (err) {
             res.json({ "Error": err })
         }
@@ -33,7 +36,7 @@ app.post('/addSchool', (req, res) => {
                 res.json({ "exist": "exist" })
             }
             else {
-                var query_stat = `INSERT INTO schools (name, address, longitude, latitude) VALUES ('${name}', '${address}', '${longitude}', '${latitude}');`
+                var query_stat = `INSERT INTO ${database_name} (name, address, longitude, latitude) VALUES ('${name}', '${address}', '${longitude}', '${latitude}');`
                 Student.query(query_stat, (err) => {
                     if (err) {
                         res.json("Error :" + err)
@@ -58,7 +61,7 @@ app.get('/listSchools/:lat/:log', (req, res) => {
             // const log = position.longitude;
             // console.log(`My latitude is ${lat} and longitude ${log}`);
 
-            Student.query(`SELECT * FROM schools`, (err, results) => {
+            Student.query(`SELECT * FROM ${database_name}`, (err, results) => {
                 if (err) {
                     res.json({ "Error": err })
                 }
