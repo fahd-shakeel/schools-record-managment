@@ -4,7 +4,7 @@ const Student = require('./models/student.model')
 const cors = require('cors')
 const { Navigator } = require('node-navigator')
 const navigator = new Navigator();
-const database_name = "sql12727656";
+const database_name = "schools";
 
 app.use(cors())
 app.use(express.json())
