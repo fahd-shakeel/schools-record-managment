@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 var Student = mysql.createConnection({
-    host:'127.0.0.1',
+    host:'sql12.freemysqlhosting.net',
     port:'3306',
-    user:'root',
-    password:"root"
+    user:'sql12727656',
+    password:"ZmmQNthEXW"
 })
 
 module.exports = Student
