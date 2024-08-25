@@ -30,6 +30,7 @@ const AddSchool = () => {
                     }
                     else {
                         alert("Data is successfully Inserted")
+                        window.location.reload();
                     }
                 })
                 .catch((err) => console.log("Error :" + err))
@@ -49,15 +50,15 @@ const AddSchool = () => {
                     <label>Address</label>
                     <input required type='text' placeholder='Address' onChange={(e) => onChangeAddress(e.target.value)}></input>
                 </div>
+    
+                <div>
+                    <label>Latitude</label>
+                    <input required type='number' placeholder='Latitude' onChange={(e) => onChangeLatitude(e.target.value)}></input>
+                </div>
 
                 <div>
                     <label>Longitude</label>
                     <input required type='number' placeholder='Longitude' onChange={(e) => onChangeLongitude(e.target.value)}></input>
-                </div>
-
-                <div>
-                    <label>Latitude</label>
-                    <input required type='number' placeholder='Latitude' onChange={(e) => onChangeLatitude(e.target.value)}></input>
                 </div>
             </div>
             <div id='btn'>
